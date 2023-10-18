@@ -21,11 +21,13 @@ public:
             if(list1->val <= list2->val){
                 // If the value in list1 is smaller or equal, append the node to the merged list
                 curr->next = list1;
+                // Move the list1 pointer to the next node
                 list1 = list1->next;
             }
             else{
                 // If the value in list2 is smaller, append the node to the merged list
                 curr->next = list2;
+                // Move the list2 pointer to the next node
                 list2 = list2->next;
             }
             curr = curr->next; // Move the current pointer to the last node in the merged list
@@ -40,3 +42,11 @@ public:
         return dumy->next; // Return the merged list, skipping the dumy node
     }
 };
+
+/* Visualization
+case 1: list1 = [1,2,4], list2 = [1,3,4]
+step 1: dumy = [0], curr = [0]
+step 2: list1 = [1,2,4], list2 = [1,3,4]
+step 3: list1 = [2,4], list2 = [1,3,4]
+
+*/
