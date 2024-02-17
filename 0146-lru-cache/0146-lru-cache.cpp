@@ -43,6 +43,7 @@ public:
     }
     
     void put(int key, int value) {
+        // if key exists, update value and move to MRU
         if (cache.find(key)!= cache.end()) {
             remove(cache[key]);
             
