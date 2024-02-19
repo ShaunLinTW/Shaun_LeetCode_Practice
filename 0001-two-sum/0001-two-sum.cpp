@@ -31,3 +31,32 @@ public:
         return result;
     }
 };
+
+
+/*
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        // using two pass hash table
+        // create an empty hash table to store elements and indices
+        unordered_map<int, int> map;
+
+        // iterate through nums array to build hash table
+        for (int i = 0; i < nums.size(); i++){
+            map[nums[i]] = i;
+        }
+
+        // iterate through the nums array
+        for (int i = 0; i < nums.size(); i++){
+            // calculate complement value by subtracting target with current number
+            int complement_val = target - nums[i];
+            // if the complement_val in the hash table, if it does, return the current index and complement_val index in the hash table 
+            if (map.count(complement_val) && map[complement_val] != i){
+                return {i, map[complement_val]};
+            }
+        }
+        // other, no solution found, return empty
+        return {};
+    }
+};
+*/
