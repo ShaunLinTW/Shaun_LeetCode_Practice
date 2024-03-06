@@ -13,6 +13,7 @@ public:
     Node* prev;
     Node* next;
 
+    // constructor, initialize key and value
     Node (int key, int value) {
         k = key;
         val = value;
