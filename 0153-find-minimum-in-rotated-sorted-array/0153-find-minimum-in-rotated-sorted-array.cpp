@@ -1,25 +1,32 @@
 class Solution {
 public:
     int findMin(vector<int>& nums) {
-        int res = nums[0];
-        int l = 0;
-        int h = nums.size() - 1;
+        // initialize the result as first element
+        int result = nums[0];
 
-        while(l <= h){
-            if (nums[l] < nums[h]){
-                res = min(res, nums[l]);
-                break;
-            }
-            int mid = l + (h - l) / 2;
-            res = min(res, nums[mid]);
+        // initialize the left and right pointers
+        int left = 0;
+        int right = nums.size() - 1;
 
-            if (nums[mid] >= nums[l]){
-                l = mid + 1;
+        // no rotation case
+        if (nums[left] <= nums[right]){
+            return nums[left];
+        }
+
+        // iterate through the vector until the left pointer is less or equal to the right pointer
+        while (left <= right){
+            // calculate the middle pointer
+            int mid = left + (right - left) / 2;
+            result = min(result, nums[mid]);
+
+            // if the middle element is greater than the right element, move the left pointer to the middle + 1
+            if (nums[mid] > nums[right]){
+                left = mid + 1;
             }
-            else {
-                h = mid - 1;
+            else{
+                right = mid - 1;
             }
         }
-        return res;
+        return result;
     }
 };
