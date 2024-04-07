@@ -18,7 +18,8 @@ public:
         // iterate over the entries in freq, add each entry to the priority quere and ensure its size does not exceed k
         for (auto & entry : freq){
             pq.push(entry);
-            if (pq.size() > k){
+            int pq_size = pq.size();
+            if (pq_size > k){
                 pq.pop(); // remove smallest element if priority quere size exceeds k
             }
         }
@@ -29,7 +30,6 @@ public:
             res.push_back(pq.top().first); // add the number to the back of the output vector
             pq.pop(); // remove the pair from the priority queue
         }
-        reverse(res.begin(), res.end()); // reverse the output vector to ensure the elements are in descending order of frequency.
         return res;
     }
 };
