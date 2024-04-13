@@ -15,7 +15,7 @@ public:
     // using isSameTree helper function
     bool isSameTree (TreeNode* p, TreeNode* q){
         // base case
-        if (p == NULL && p == NULL) return true;
+        if (p == NULL && q == NULL) return true;
         if (p == NULL || q == NULL || p->val != q->val) return false;
         return (isSameTree(p->left, q->left) && isSameTree(p->right, q->right));
     }
@@ -25,6 +25,6 @@ public:
         // check if current Tree and sub-Tree are identical
         if (isSameTree(root, subRoot)) return true;
         // recursive call isSubtree to check all child node of the Tree
-        return (isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot));
+        return isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
     }
 };
