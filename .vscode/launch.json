@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/pisces/Downloads/Shaun_LeetCode_Practice/0347-top-k-frequent-elements",
-      "program": "/Users/pisces/Downloads/Shaun_LeetCode_Practice/0347-top-k-frequent-elements/build/Debug/outDebug"
+      "cwd": "/Users/pisces/Downloads/Shaun_LeetCode_Practice/",
+      "program": "/Users/pisces/Downloads/Shaun_LeetCode_Practice/",
     }
   ]
 }

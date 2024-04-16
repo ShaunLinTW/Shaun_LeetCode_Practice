@@ -6,6 +6,7 @@
  *     struct TreeNode *right;
  * };
  */
+
 int maxDepth(struct TreeNode* root) {
     // edge case
     if (root == NULL) return 0;
