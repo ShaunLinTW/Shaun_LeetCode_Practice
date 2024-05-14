@@ -18,7 +18,7 @@ public:
 
             // if stack is not empty
             if (!stack.empty()){
-                result[i] = stack.back() - i; // why???
+                result[i] = stack.back() - i; // update result vector based on last element of stack index vector
             }
             
             stack.push_back(i); // 1st iteration stack is empty, push the index to stack
