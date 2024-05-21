@@ -1,5 +1,5 @@
 int maxSubArray(int* nums, int numsSize) {
-    // initialize masSum and currentSum 
+    // initialize maxSum and currentSum 
     int maxSum = INT_MIN;
     int currentSum = 0;
 
