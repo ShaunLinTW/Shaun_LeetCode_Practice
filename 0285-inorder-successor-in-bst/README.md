@@ -3,14 +3,14 @@
 <p>The successor of a node <code>p</code> is the node with the smallest key greater than <code>p.val</code>.</p>
 
 <p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+<p><strong class="example">Example 1:</strong></p>
 <img alt="" src="https://assets.leetcode.com/uploads/2019/01/23/285_example_1.PNG" style="width: 122px; height: 117px;">
 <pre><strong>Input:</strong> root = [2,1,3], p = 1
 <strong>Output:</strong> 2
 <strong>Explanation:</strong> 1's in-order successor node is 2. Note that both p and the return value is of TreeNode type.
 </pre>
 
-<p><strong>Example 2:</strong></p>
+<p><strong class="example">Example 2:</strong></p>
 <img alt="" src="https://assets.leetcode.com/uploads/2019/01/23/285_example_2.PNG" style="width: 246px; height: 229px;">
 <pre><strong>Input:</strong> root = [5,3,6,2,4,null,null,1], p = 6
 <strong>Output:</strong> null
