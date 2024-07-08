@@ -1,6 +1,4 @@
 int findMin(int* nums, int numsSize) {
-    
-}int findMin(int* nums, int numsSize) {
     // initialize left, right, middle index
     int left = 0;
     int right = numsSize - 1;
